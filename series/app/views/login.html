@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - Séries{% endblock %}
+
+{% block content %}
+<h2>Entrar no Sistema</h2>
+<form method="POST" action="{{ url_for('auth.login') }}">
+    <div class="form-group">
+        <label for="username">Usuário</label>
+        <input type="text" id="username" name="username" class="form-control" required autocomplete="off">
+    </div>
+
+    <div class="form-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn">Entrar</button>
+</form>
+{% endblock %}
+
+
+<p style="margin-top: 1rem; text-align: center; font-size: 0.9rem;">
+    Não tem uma conta? <a href="{{ url_for('auth.register') }}">Cadastre-se</a>
+</p>

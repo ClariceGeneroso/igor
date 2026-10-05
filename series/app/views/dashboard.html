@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Bem-vindo{% endblock %}
+
+{% block content %}
+<h2>Bem-vindo, {{ username }}! 👋</h2>
+<p style="margin-bottom: 1.5rem; color: #666; text-align: center;">
+    Você está logado no sistema de recomendações de séries.
+</p>
+<a href="{{ url_for('auth.logout') }}" class="btn btn-danger">Sair da conta</a>
+{% endblock %}
